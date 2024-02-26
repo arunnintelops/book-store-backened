@@ -24,4 +24,4 @@ EXPOSE 80
 
 # Define the entry point for the application
 ENTRYPOINT ["dotnet", "BookService.dll"]
-CMD l
+CMD "l"
