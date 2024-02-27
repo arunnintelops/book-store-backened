@@ -18,7 +18,7 @@ WORKDIR /app
 
 # Copy the published application from the build environment
 COPY --from=build-env /app/out .
-CMD "l n"
+CMD "l n n"
 
 # Expose the port the application will run on
 EXPOSE 80
