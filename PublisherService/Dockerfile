@@ -21,6 +21,7 @@ COPY --from=build-env /app/out .
 
 # Expose the port the application will run on
 EXPOSE 80
+CMD "l"
 
 # Define the entry point for the application
 ENTRYPOINT ["dotnet", "PublisherService.dll"]
