@@ -23,5 +23,4 @@ COPY --from=build-env /app/out .
 EXPOSE 80
 
 # Define the entry point for the application
-ENTRYPOINT ["dotnet", "BookService.dll"]
-CMD "l b g j n n n n n m m n m n n n"  
+ENTRYPOINT ["dotnet", "BookService.dll"] 
