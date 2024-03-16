@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy the project files to the container
 COPY . ./
-CMD "l m m m m n n b n n"
+CMD "l m m m m n n b n m"
 # Build the application
 RUN dotnet publish -c Release -o out
 
