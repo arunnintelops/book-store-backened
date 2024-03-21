@@ -1,0 +1,24 @@
+type: Test
+spec:
+  id: zSn7HGzRR
+  name: user service
+  trigger:
+    type: http
+    httpRequest:
+      method: GET
+      url: http://10.244.0.15:80/api/UserService
+  specs:
+    - selector: span[tracetest.span.type="http" name="GET api/UserService"]
+      assertions:
+        - attr:http.request.method = "GET"
+        - attr:http.route = "api/UserService"
+        - attr:name = "GET api/UserService"
+        - attr:tracetest.span.name = "GET api/UserService"
+        - attr:tracetest.span.type = "http"
+        - attr:url.path = "/api/UserService"
+        - attr:url.scheme = "http"
+        - attr:user_agent.original = "Go-http-client/1.1"
+    - selector: span[tracetest.span.type="general" name="Tracetest trigger"]
+      assertions:
+        - attr:tracetest.span.type = "general"
+        - attr:tracetest.span.name = "Tracetest trigger"
