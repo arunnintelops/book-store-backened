@@ -1,2 +1,2 @@
 # book-store-backenend
-book
+book-store
