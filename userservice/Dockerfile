@@ -12,7 +12,7 @@ RUN dotnet publish -c Release -o out
 
 # Use the official .NET 7 runtime image as the base image for the final image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
-CMD "l n v"
+CMD "l n "
 # Set the working directory inside the container
 WORKDIR /app
 
